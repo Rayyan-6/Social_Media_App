@@ -392,46 +392,59 @@ class _PostState extends State<Post> {
                     ),
                   )
               ),
-                Container(
-                  //a container to show tip creator button on posts
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20)
-                  ),
-                  height: 370,
-                  width: screenWidth,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.fromLTRB(0, 0, 10, 10),
-                        child: Row(
-                            mainAxisAlignment: MainAxisAlignment.end,
-                            children: [
-                              GestureDetector(
-                                onTap: (){
-                                  setState(() {
-                                     // selected1 = false;
-                                     // selected2 = false;
-                                     // selected3 = false;
-                                     // selected4 = false;
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => FullScreenImage(imgUrl: widget.postpicurl, tag: widget.postpicurl,),
+                      ),
+                    );
+                  },
+                  child: Hero(
+                                tag: 'null',
+                    child: Container(
+                      //a container to show 'Tip Creator' button on posts
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20)
+                      ),
+                      height: 370,
+                      width: screenWidth,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(0, 0, 10, 10),
+                            child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: [
+                                  GestureDetector(
+                                    onTap: (){
+                                      setState(() {
+                                         // selected1 = false;
+                                         // selected2 = false;
+                                         // selected3 = false;
+                                         // selected4 = false;
 
-                                  });
-                                  _showMyDialog(context);
-                                },
-                                child: Container(
-                                    width: 120,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      color: Colors.transparent,
-                                      border: Border.all(color: Colors.white, width: 2.0),
-                                    ),
-                                    child: Center(child: Text('\$  Tip Creator',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),))),
-                              )
-                            ],
-                          ),
+                                      });
+                                      _showMyDialog(context);
+                                    },
+                                    child: Container(
+                                        width: 120,
+                                        decoration: BoxDecoration(
+                                          borderRadius: BorderRadius.circular(20),
+                                          color: Colors.transparent,
+                                          border: Border.all(color: Colors.white, width: 2.0),
+                                        ),
+                                        child: Center(child: Text('\$  Tip Creator',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 16),))),
+                                  )
+                                ],
+                              ),
 
-                      )
-                    ],
+                          )
+                        ],
+                      ),
+                    ),
                   ),
                 )
               ],
@@ -493,6 +506,5 @@ class _PostState extends State<Post> {
       ),
     );
   }
-
 }
 
