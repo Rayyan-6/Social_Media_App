@@ -1,0 +1,43 @@
+       // child: ElevatedButton(
+                    //   style: ButtonStyle(
+                    //     shape: MaterialStateProperty.all<OutlinedBorder>(
+                    //       RoundedRectangleBorder(
+                    //         borderRadius: BorderRadius.circular(
+                    //             5.0),
+                    //       ),
+                    //     ),
+                    //     backgroundColor: MaterialStateProperty.all<Color>(
+                    //       Colors.transparent,
+                    //
+                    //     ),
+                    //     foregroundColor: MaterialStateProperty.all<Color>(
+                    //       Colors.transparent,
+                    //     ),
+                    //   ),
+                    //   onPressed: () {
+                    //     if (_formKey.currentState?.validate() ?? false) {
+                    //       // Validation passed,
+                    //       if (passwordController.text !=
+                    //           confpasswordController.text) {
+                    //         ScaffoldMessenger.of(context).showSnackBar(
+                    //           SnackBar(
+                    //             backgroundColor: Colors.blue,
+                    //             content: Center(
+                    //                 child: Text(
+                    //               'Passwords do not match',
+                    //               style: TextStyle(
+                    //                   fontWeight: FontWeight.bold, fontSize: 18),
+                    //             )),
+                    //           ),
+                    //         );
+                    //       }
+                    //       else {
+                    //         print('Passwords are equal!');
+                    //       }
+                    //     }
+                    //   },
+                    //   child: Text(
+                    //     'SignUp',
+                    //     style: TextStyle(fontWeight: FontWeight.bold),
+                    //   ),
+                    // ),
