@@ -1,6 +1,6 @@
 import 'package:awesome_project/Profile%20Page%20Widgets/ProfilePageBundle.dart';
+import 'package:awesome_project/globals.dart';
 import 'package:flutter/material.dart';
-
 import 'ProfilePagePosts2.dart';
 
 class ProfilePagePosts extends StatefulWidget {
@@ -11,15 +11,8 @@ class ProfilePagePosts extends StatefulWidget {
 }
 
 class _ProfilePagePostsState extends State<ProfilePagePosts> {
-  bool showPosts = true;
-
-  void onFollowStatusChanged(bool newFollowStatus) {
-    setState(() {
-      showPosts = newFollowStatus;
-    });
-  }
-
-
+  // bool showPosts = (followText=='Following');
+  // bool showPosts = true;
   @override
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
@@ -97,51 +90,131 @@ class _ProfilePagePostsState extends State<ProfilePagePosts> {
             ],
           ),
         ),
-        // Show either Posts or Bundles based on the selected button
+
+        ////////////////////////////////////////
+
+        //Show either Posts or Bundles based on the selected button
         Visibility(
           visible: showPosts,
           child: Column(
             children: [
-              ProfilePagePosts2(
-                imgurl: 'assets/flowerpost.jpg',
-                imgurl2: 'assets/samplepostpic.png',
-                imgurl3: 'assets/flowerpost.jpg',
+              Visibility(
+                visible: isBlur==false,
+                child: Column(
+                  children: [
+                    ProfilePagePosts2(
+                      imgurl: 'assets/flowerpost.jpg',
+                      imgurl2: 'assets/samplepostpic.png',
+                      imgurl3: 'assets/flowerpost.jpg',
+                    ),
+                    ProfilePagePosts2(
+                        imgurl: 'assets/homepagepic.png',
+                        imgurl2: 'assets/flowerpost.jpg',
+                        imgurl3: 'assets/homepagepic.png'),
+                    ProfilePagePosts2(
+                        imgurl: 'assets/flowerpost.jpg',
+                        imgurl2: 'assets/homepagepic.png',
+                        imgurl3: 'assets/flowerpost.jpg'),
+                    ProfilePagePosts2(
+                        imgurl: 'assets/samplepostpic.png',
+                        imgurl2: 'assets/flowerpost.jpg',
+                        imgurl3: 'assets/samplepostpic.png'),
+                    ProfilePagePosts2(
+                        imgurl: 'assets/flowerpost.jpg',
+                        imgurl2: 'assets/homepagepic.png',
+                        imgurl3: 'assets/flowerpost.jpg'),
+                    ProfilePagePosts2(
+                        imgurl: 'assets/homepagepic.png',
+                        imgurl2: 'assets/flowerpost.jpg',
+                        imgurl3: 'assets/samplepostpic.png'),
+                  ],
+                ),
               ),
-              ProfilePagePosts2(
-                  imgurl: 'assets/homepagepic.png',
-                  imgurl2: 'assets/flowerpost.jpg',
-                  imgurl3: 'assets/homepagepic.png'),
-              ProfilePagePosts2(
-                  imgurl: 'assets/flowerpost.jpg',
-                  imgurl2: 'assets/homepagepic.png',
-                  imgurl3: 'assets/flowerpost.jpg'),
-              ProfilePagePosts2(
-                  imgurl: 'assets/samplepostpic.png',
-                  imgurl2: 'assets/flowerpost.jpg',
-                  imgurl3: 'assets/samplepostpic.png'),
-              ProfilePagePosts2(
-                  imgurl: 'assets/flowerpost.jpg',
-                  imgurl2: 'assets/homepagepic.png',
-                  imgurl3: 'assets/flowerpost.jpg'),
-              ProfilePagePosts2(
-                  imgurl: 'assets/homepagepic.png',
-                  imgurl2: 'assets/flowerpost.jpg',
-                  imgurl3: 'assets/samplepostpic.png'),
+              Visibility(
+                  visible: isBlur==true,
+                  child: Container(
+                    width: screenWidth,
+                    child: Icon(Icons.lock_rounded,size: 100,),
+                  )
+              )
             ],
           ),
         ),
+
         Visibility(
-          visible: !showPosts,
-          child: Column(
-            children: [
-              ProfilePageBundle(imgurl: 'assets/flowerpost.jpg', imgurl2: 'assets/homepagepic.png', imgurl3: 'assets/profilecover.jpg'),
-              ProfilePageBundle(imgurl: 'assets/samplepostpic.png', imgurl2: 'assets/profilecover.jpg', imgurl3: 'assets/fbIcon.jpg'),
-              ProfilePageBundle(imgurl: 'assets/flowerpost.jpg', imgurl2: 'assets/homepagepic.png', imgurl3: 'assets/profilecover.jpg'),
-              ProfilePageBundle(imgurl: 'assets/samplepostpic.png', imgurl2: 'assets/fbIcon.jpg', imgurl3: 'assets/profilecover.jpg'),
-            ],
-          )
+            visible: !showPosts,
+            child: Column(
+              children: [
+                Visibility(
+                  visible: isBlur==false,
+                  child: Column(
+                    children: [
+                      ProfilePageBundle(imgurl: 'assets/flowerpost.jpg', imgurl2: 'assets/homepagepic.png', imgurl3: 'assets/profilecover.jpg'),
+                      ProfilePageBundle(imgurl: 'assets/samplepostpic.png', imgurl2: 'assets/profilecover.jpg', imgurl3: 'assets/fbIcon.jpg'),
+                      ProfilePageBundle(imgurl: 'assets/flowerpost.jpg', imgurl2: 'assets/homepagepic.png', imgurl3: 'assets/profilecover.jpg'),
+                      ProfilePageBundle(imgurl: 'assets/samplepostpic.png', imgurl2: 'assets/fbIcon.jpg', imgurl3: 'assets/profilecover.jpg'),
+                    ],
+                  ),
+                ),
+                Visibility(
+                  visible: isBlur==true,
+                    child: Container(
+                      width: screenWidth,
+                      child: Icon(Icons.lock_rounded,size: 100,),
+                    )
+                )
+              ],
+            ),
+
         ),
+
+
       ],
     );
   }
 }
+        // Show either Posts or Bundles based on the selected button
+        // Visibility(
+        //   visible: showPosts,
+        //   child: Column(
+        //     children: [
+        //       ProfilePagePosts2(
+        //         imgurl: 'assets/flowerpost.jpg',
+        //         imgurl2: 'assets/samplepostpic.png',
+        //         imgurl3: 'assets/flowerpost.jpg',
+        //       ),
+        //       ProfilePagePosts2(
+        //           imgurl: 'assets/homepagepic.png',
+        //           imgurl2: 'assets/flowerpost.jpg',
+        //           imgurl3: 'assets/homepagepic.png'),
+        //       ProfilePagePosts2(
+        //           imgurl: 'assets/flowerpost.jpg',
+        //           imgurl2: 'assets/homepagepic.png',
+        //           imgurl3: 'assets/flowerpost.jpg'),
+        //       ProfilePagePosts2(
+        //           imgurl: 'assets/samplepostpic.png',
+        //           imgurl2: 'assets/flowerpost.jpg',
+        //           imgurl3: 'assets/samplepostpic.png'),
+        //       ProfilePagePosts2(
+        //           imgurl: 'assets/flowerpost.jpg',
+        //           imgurl2: 'assets/homepagepic.png',
+        //           imgurl3: 'assets/flowerpost.jpg'),
+        //       ProfilePagePosts2(
+        //           imgurl: 'assets/homepagepic.png',
+        //           imgurl2: 'assets/flowerpost.jpg',
+        //           imgurl3: 'assets/samplepostpic.png'),
+        //     ],
+        //   ),
+        // ),
+        //
+        // Visibility(
+        //   visible: !showPosts,
+        //   child: Column(
+        //     children: [
+        //       ProfilePageBundle(imgurl: 'assets/flowerpost.jpg', imgurl2: 'assets/homepagepic.png', imgurl3: 'assets/profilecover.jpg'),
+        //       ProfilePageBundle(imgurl: 'assets/samplepostpic.png', imgurl2: 'assets/profilecover.jpg', imgurl3: 'assets/fbIcon.jpg'),
+        //       ProfilePageBundle(imgurl: 'assets/flowerpost.jpg', imgurl2: 'assets/homepagepic.png', imgurl3: 'assets/profilecover.jpg'),
+        //       ProfilePageBundle(imgurl: 'assets/samplepostpic.png', imgurl2: 'assets/fbIcon.jpg', imgurl3: 'assets/profilecover.jpg'),
+        //     ],
+        //   )
+        // ),

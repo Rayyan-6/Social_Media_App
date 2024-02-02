@@ -102,10 +102,8 @@ class _SignUpPageState extends State<SignUpPage> {
                           onChanged: (bool? value) {
                           },
                         ),
-
                         Flexible(
                             child:
-
                             RichText(
                               text: TextSpan(
                                 text: 'By signing up you accept the ',
@@ -128,8 +126,6 @@ class _SignUpPageState extends State<SignUpPage> {
                               ),
                             ),
                         ),
-
-
                       ],
                     ),
                     SizedBox(height: 16.0),
@@ -179,10 +175,6 @@ class _SignUpPageState extends State<SignUpPage> {
                       ),
                     ),
                     SizedBox(height: 8.0),
-
-
-
-
                   ],
                 ),
               ),
@@ -221,24 +213,13 @@ class _SignUpPageState extends State<SignUpPage> {
                                   ),
                                 ),
                               ),
-
-
                             ]),
-
-
-
-
                       )
                       )
-
                     ]
                 ),]
             ),
           ),
-
-
-
-
         ],
       ),
     );

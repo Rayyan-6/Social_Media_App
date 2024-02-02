@@ -2,6 +2,7 @@ import 'package:awesome_project/signUp.dart';
 import 'package:flutter/material.dart';
 
 import 'newLoginPage.dart';
+import 'newSignupPage.dart';
 
 
 class newStartPage extends StatefulWidget {
@@ -159,7 +160,7 @@ class _newStartPageState extends State<newStartPage> {
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const SignUpPage()),
+                                  builder: (context) => const newSignupPage()),
                             );
                           },
                           style: ButtonStyle(

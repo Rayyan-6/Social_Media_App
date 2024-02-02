@@ -5,6 +5,7 @@ import 'package:awesome_project/textFields.dart';
 import 'package:flutter/material.dart';
 
 import 'elevatedButtons.dart';
+import 'newSignupPage.dart';
 
 class newLoginPage extends StatefulWidget {
   const newLoginPage({super.key});
@@ -152,7 +153,7 @@ class _newLoginPageState extends State<newLoginPage> {
                               Navigator.pushReplacement(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => const SignUpPage()
+                                    builder: (context) => const newSignupPage()
                                 ),
                               );
                             },

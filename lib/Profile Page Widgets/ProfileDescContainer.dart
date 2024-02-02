@@ -1,5 +1,6 @@
 import 'package:awesome_project/ButtonContainer.dart';
 import 'package:awesome_project/Profile%20Page%20Widgets/ProfileStats.dart';
+import 'package:awesome_project/globals.dart';
 import 'package:flutter/material.dart';
 
 class ProfileDescContainer extends StatefulWidget {
@@ -12,9 +13,8 @@ class ProfileDescContainer extends StatefulWidget {
 class _ProfileDescContainerState extends State<ProfileDescContainer> {
   bool followStatus= false;
   bool subscribeStatus= false;
-  String followText = '';
+  // String followText = '';
   String subsText= '';
-
 
 
   @override
@@ -82,7 +82,6 @@ class _ProfileDescContainerState extends State<ProfileDescContainer> {
             // for profile desc.
             children: [
               Text('Australia\'s best gamer | Call of Duty | Fortnite',style: TextStyle(fontSize: 14)),
-
             ],
           ),
           SizedBox(height: 15,),
@@ -94,20 +93,23 @@ class _ProfileDescContainerState extends State<ProfileDescContainer> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              ButtonContainer(width: screenWidth / 2.5, title: followText ,onPressed: (){
-                setState(() {
-                  // followText= 'Followed';
-                  followStatus=!followStatus;
-                });
+              //follow button
+               ButtonContainer(
+                  width: screenWidth / 2.5, title: followText ,onPressed: (){
+                  setState(() {
+                    followStatus=!followStatus;
+                    isBlur = !isBlur;
+                    toggleStatus();
+                    // isContentVisible = followStatus;
+                  });
+                },),
 
-
-              },),
               SizedBox(
                 width: 5,
               ),
+              //subscribe button
               ButtonContainer(width: screenWidth / 2.5, title: subsText,onPressed: (){
                 setState(() {
-                  // subsText='Subscribed';
                   subscribeStatus=!subscribeStatus;
                 });
               },),

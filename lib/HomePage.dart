@@ -50,7 +50,9 @@ class _HomePageState extends State<HomePage> {
                               );
                             },
                             child: Container(
-                                child: Image.asset('assets/bellicon.png')),
+                                // child: Image.asset('assets/bellicon.png'),
+                                child: Icon(Icons.notifications_none_sharp,size: 30,)
+                            ),
                           ),
                         ))
                   ],
