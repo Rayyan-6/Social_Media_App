@@ -1,6 +1,5 @@
 import 'package:awesome_project/ForgotPwdPage.dart';
 import 'package:awesome_project/HomePage.dart';
-import 'package:awesome_project/signUp.dart';
 import 'package:awesome_project/textFields.dart';
 import 'package:flutter/material.dart';
 

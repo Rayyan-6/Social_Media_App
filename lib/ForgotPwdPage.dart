@@ -1,9 +1,7 @@
 import 'package:awesome_project/VerificationCode.dart';
 import 'package:awesome_project/textFields.dart';
 import 'package:flutter/material.dart';
-
-import 'elevatedButtons.dart';
-import 'loginPage.dart';
+import 'newLoginPage.dart';
 
 class ForgotPwdpage extends StatefulWidget {
   const ForgotPwdpage({super.key});
@@ -189,7 +187,7 @@ class _ForgotPwdpageState extends State<ForgotPwdpage> {
                                   Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => const LoginPage()),
+                                        builder: (context) => const newLoginPage()),
                                   );
                                 },
                                 child: Text('Sign In',

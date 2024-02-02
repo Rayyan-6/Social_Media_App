@@ -1,18 +1,5 @@
-import 'package:awesome_project/Home%20Page%20Widgets/SubscribersTile.dart';
-import 'package:awesome_project/NotificationsPage.dart';
-import 'package:awesome_project/Profile%20Page%20Widgets/Pop%20Up%20Menu/AnalyticsPage.dart';
-import 'package:awesome_project/Profile%20Page%20Widgets/Pop%20Up%20Menu/EditProfile.dart';
-import 'package:awesome_project/Profile%20Page%20Widgets/Pop%20Up%20Menu/TransactionHistoryPage.dart';
-import 'package:awesome_project/StartPage.dart';
-import 'package:awesome_project/SubscribersPage.dart';
-import 'package:awesome_project/loginPage.dart';
-import 'package:awesome_project/newLoginPage.dart';
-import 'package:awesome_project/startScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'HomePage.dart';
-import 'Profile Page Widgets/Pop Up Menu/MorePage.dart';
-import 'ProfilePage.dart';
 import 'ThemeProvider.dart';
 import 'newStartPage.dart';
 

@@ -1,8 +1,6 @@
 import 'package:awesome_project/textFields.dart';
 import 'package:flutter/material.dart';
 
-import 'elevatedButtons.dart';
-import 'loginPage.dart';
 import 'newLoginPage.dart';
 
 class VerificationCode extends StatefulWidget {

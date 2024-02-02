@@ -1,4 +1,3 @@
-import 'package:awesome_project/signUp.dart';
 import 'package:flutter/material.dart';
 
 import 'newLoginPage.dart';
