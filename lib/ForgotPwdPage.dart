@@ -14,7 +14,8 @@ class _ForgotPwdpageState extends State<ForgotPwdpage> {
     Brightness brightness = Theme.of(context).brightness;
     setState(() {
       _isDialogOpen = true;
-    });
+    }
+    );
     return showDialog<void>(
       context: context,
       builder: (BuildContext context) {
@@ -71,8 +72,6 @@ class _ForgotPwdpageState extends State<ForgotPwdpage> {
   Widget build(BuildContext context) {
     double screenWidth = MediaQuery.of(context).size.width;
     Brightness brightness = Theme.of(context).brightness;
-
-
     return Scaffold(
       body: Column(
         children:[
@@ -120,18 +119,11 @@ class _ForgotPwdpageState extends State<ForgotPwdpage> {
                     SizedBox(height: 20,),
                     Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child:
-
-                        MyTextField(title: 'Email', controller: forgotPwdController, myicon: Icons.email, obscure: false,)
+                        child: MyTextField(title: 'Email', controller: forgotPwdController, myicon: Icons.email, obscure: false,)
                     ),
                     // SizedBox(height: 16.0),
-
-                    // MyElevatedButton(title: 'Reset Password',),
-
                     GestureDetector(
                       onTap: (){
-
-
                         _showMyDialog(context);
                       },
                       child: Container(
@@ -154,11 +146,7 @@ class _ForgotPwdpageState extends State<ForgotPwdpage> {
                         ),
                       ),
                     ),
-
                     SizedBox(height: 8.0),
-
-
-
                   ],
                 ),
               ),
@@ -176,9 +164,7 @@ class _ForgotPwdpageState extends State<ForgotPwdpage> {
                           child: Image.asset('assets/Ellipse2.png')),
                       Center(child: Padding(
                         padding: EdgeInsets.fromLTRB(0, 40, 0, 0),
-                        child:
-
-                        Row(
+                        child:  Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children:[
                               Text('Already have an account? '),
@@ -196,13 +182,7 @@ class _ForgotPwdpageState extends State<ForgotPwdpage> {
                                   ),
                                 ),
                               ),
-
-
                             ]),
-
-
-
-
                       )
                       )
 

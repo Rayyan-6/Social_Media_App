@@ -10,7 +10,6 @@ class ProfilePagePosts extends StatefulWidget {
   State<ProfilePagePosts> createState() => _ProfilePagePostsState();
 }
 
-
 class _ProfilePagePostsState extends State<ProfilePagePosts> {
   @override
   Widget build(BuildContext context) {
@@ -89,9 +88,7 @@ class _ProfilePagePostsState extends State<ProfilePagePosts> {
             ],
           ),
         ),
-
         ////////////////////////////////////////
-
         //Show either Posts or Bundles based on the selected button
         Visibility(
           visible: showPosts,
@@ -164,10 +161,7 @@ class _ProfilePagePostsState extends State<ProfilePagePosts> {
                 )
               ],
             ),
-
         ),
-
-
       ],
     );
   }
